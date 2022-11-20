@@ -1,4 +1,4 @@
-package edu.miracosta.cs113.change;
+package edu.miracosta.cs113.maze;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -32,7 +32,7 @@ public class Recursive {
 
             String combination = combo[i]+ ",";
             try {
-                Files.write(Paths.get("src/main/java/edu/miracosta/cs113/change/CoinCombinations.txt"), combination.getBytes(), StandardOpenOption.APPEND);
+                Files.write(Paths.get("src/main/java/edu/miracosta/cs113/maze/maze.txt"), combination.getBytes(), StandardOpenOption.APPEND);
             }catch (IOException e) {
                 //exception handling left as an exercise for the reader
             }

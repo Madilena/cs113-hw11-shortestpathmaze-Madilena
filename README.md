@@ -5,7 +5,7 @@
 
 ## [Recursive] Change Calculator (based on Programming Project #7, pg. 291):
 
->Make sure to use the `edu.miracosta.cs113.change` to store your solution (files described below are within this package).
+>Make sure to use the `edu.miracosta.cs113.maze` to store your solution (files described below are within this package).
 
 Using the provided ChangeCalculator class, implement the recursive method `calculateChange(int)` which will dispense change for a given amount of money. The method will **display and return** the total number of combinations of quarters, dimes, nickels, and pennies that equal the desired amount and all of the combinations as well. Avoid duplication.
 
