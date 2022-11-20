@@ -30,7 +30,7 @@ public class MazeDriver {
             v = parent[v];
         }
 
-        System.out.println("the shortest path is:");
+        System.out.println("***THE SHORTEST PATH IS:");
         while(!thePath.empty()){
             System.out.println(thePath.pop());
         }
