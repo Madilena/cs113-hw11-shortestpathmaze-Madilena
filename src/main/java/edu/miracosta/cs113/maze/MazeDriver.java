@@ -6,13 +6,12 @@ import java.io.IOException;
 import java.util.Scanner;
 import java.util.Stack;
 
-public class Maze {
+public class MazeDriver {
     public static <Graph> void main(String[] args){
         int numV = 0;
         edu.miracosta.cs113.maze.Graph theMaze = null;
-
         try{
-            Scanner scan = new Scanner(new File(args[0]));
+            Scanner scan = new Scanner(new File("/Users/madilenamendiola/IdeaProjects/cs113-hw11-shortestpathmaze-Madilena/src/main/java/edu/miracosta/cs113/maze/maze.txt"));
             theMaze = AbstractGraph.createGraph(scan, false, "List");
             numV = theMaze.getNumV();
         }
@@ -30,6 +29,7 @@ public class Maze {
             thePath.push(v);
             v = parent[v];
         }
+
         System.out.println("the shortest path is:");
         while(!thePath.empty()){
             System.out.println(thePath.pop());

@@ -1,5 +1,7 @@
 package edu.miracosta.cs113.maze;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public abstract class AbstractGraph implements Graph {
@@ -20,11 +22,23 @@ public abstract class AbstractGraph implements Graph {
     }
 
     public void loadEdgesFromFile(Scanner scan){
-        //programming exercise
+
+        while(scan.hasNext()) {
+            String line = scan.nextLine(); // ignore the first line of file (its the header)
+
+            //separate all values by comma
+            String[] lineVector = line.split(",");
+            int source = Integer.parseInt(lineVector[0]);
+            int dest = Integer.parseInt(lineVector[1]);
+            Edge edge = new Edge(source, dest);
+            insert(edge);
+        }
     }
 
-    public static Graph createGraph(Scanner scan, boolean isDirected, String type){
-        int numV = scan.nextInt();
+    public static Graph createGraph(Scanner scan, boolean isDirected, String type) throws FileNotFoundException {
+
+        //int numV = scan.nextInt();
+        int numV = 17;
         AbstractGraph returnValue = null;
         if(type.equalsIgnoreCase("Matrix")){
             returnValue = new MatrixGraph(numV, isDirected);
@@ -36,6 +50,5 @@ public abstract class AbstractGraph implements Graph {
         }
             returnValue.loadEdgesFromFile(scan);
             return returnValue;
-
     }
 }
