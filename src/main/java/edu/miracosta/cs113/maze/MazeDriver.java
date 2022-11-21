@@ -11,7 +11,7 @@ public class MazeDriver {
         int numV = 0;
         edu.miracosta.cs113.maze.Graph theMaze = null;
         try{
-            Scanner scan = new Scanner(new File("/Users/madilenamendiola/IdeaProjects/cs113-hw11-shortestpathmaze-Madilena/src/main/java/edu/miracosta/cs113/maze/maze.txt"));
+            Scanner scan = new Scanner(new File("/Users/madilenamendiola/IdeaProjects/cs113-hw11-shortestpathmaze-Madilena/src/main/java/edu/miracosta/cs113/maze/maze2.txt"));
             theMaze = AbstractGraph.createGraph(scan, false, "List");
             numV = theMaze.getNumV();
         }
